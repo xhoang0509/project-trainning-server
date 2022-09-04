@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "TV",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 50
+  },
+  {
+    "id": 2,
+    "name": "Washer",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 60
+  },
+  {
+    "id": 3,
+    "name": "IPhone",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 20
+  },
+  {
+    "id": 4,
+    "name": "Macbook",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 60
+  },
+  {
+    "id": 5,
+    "name": "Laptop",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 100
+  },
+  {
+    "id": 6,
+    "name": "PC",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "createdAt": "2021-05-31",
+    "power": 500
+  },
+  {
+    "id": "051c566c-a05f-4daa-87a6-dad53d74131d",
+    "name": "TV 1",
+    "macAddress": "00:1B:44:11:3A:B7",
+    "IP": "127.0.0.1",
+    "power": 50,
+    "createAt": "2022-09-03T01:55:00.093Z"
+  }
+]
