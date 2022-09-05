@@ -1,6 +1,8 @@
 const fs = require("fs");
 
-const users = JSON.parse(fs.readFileSync(`${__dirname}/../data/devices.json`, "utf-8"));
+const users = JSON.parse(
+  fs.readFileSync(`${__dirname}/../data/devices.json`, "utf-8")
+);
 
 exports.getAll = async (ctx, next) => {
   const { req, res } = ctx;

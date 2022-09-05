@@ -1,21 +1,26 @@
 const uuid = require("uuid");
 const fs = require("fs");
 
-const users = JSON.parse(fs.readFileSync(`${__dirname}/../data/users.json`, "utf-8"));
+const users = JSON.parse(
+  fs.readFileSync(`${__dirname}/../data/users.json`, "utf-8")
+);
 
 exports.login = (ctx, next) => {
   const { username, password } = ctx.request.body;
 
-  if (username || password) {
+  if (!username || !password) {
     ctx.res.statusCode = 500;
     ctx.body = {
       status: "failed",
       message: "Missing Username or Password",
     };
-    return;
+    return true;
   }
 
-  const userExist = users.find((user) => user.username === username.toLowerCase() && user.password === password);
+  const userExist = users.find(
+    (user) =>
+      user.username === username.toLowerCase() && user.password === password
+  );
 
   if (userExist) {
     ctx.res.statusCode = 200;
@@ -77,13 +82,17 @@ exports.register = (ctx, next) => {
 
   ctx.res.statusCode = 200;
 
-  fs.writeFile(`${__dirname}/../data/users.json`, JSON.stringify([...users, newUser]), (err) => {
-    if (err) {
-      console.log("write file error: ", err);
-    } else {
-      console.log("write file users success");
+  fs.writeFile(
+    `${__dirname}/../data/users.json`,
+    JSON.stringify([...users, newUser]),
+    (err) => {
+      if (err) {
+        console.log("write file error: ", err);
+      } else {
+        console.log("write file users success");
+      }
     }
-  });
+  );
 
   ctx.body = {
     status: "success",

@@ -1,7 +1,7 @@
 const koa = require("koa");
+const koaBody = require("koa-body");
 const cors = require("@koa/cors");
 const Router = require("@koa/router");
-const bodyParser = require("koa-bodyparser");
 const deviceRouter = require("./src/routers/deviceRoute");
 const logRouter = require("./src/routers/logRoute");
 const userRouter = require("./src/routers/userRoute");
@@ -9,7 +9,7 @@ const userRouter = require("./src/routers/userRoute");
 const app = new koa();
 const router = new Router();
 
-app.use(bodyParser());
+app.use(koaBody());
 app.use(cors());
 
 router

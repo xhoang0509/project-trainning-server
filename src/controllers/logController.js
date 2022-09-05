@@ -1,7 +1,9 @@
 const uuid = require("uuid");
 const fs = require("fs");
 
-const logs = JSON.parse(fs.readFileSync(`${__dirname}/../data/logs.json`, "utf-8"));
+const logs = JSON.parse(
+  fs.readFileSync(`${__dirname}/../data/logs.json`, "utf-8")
+);
 
 exports.getAll = async (ctx) => {
   ctx.res.statusCode = 200;
@@ -14,35 +16,37 @@ exports.getAll = async (ctx) => {
 };
 
 exports.createLog = async (ctx) => {
-  const { name, macAddress, IP, power } = ctx.request.body;
-
+  const { deviceId, name, action } = ctx.request.body;
   const newLog = {
     id: uuid.v4(),
+    deviceId,
     name,
-    macAddress,
-    IP,
-    power,
-    createAt: new Date(),
+    action,
+    createdAt: Date.now(),
   };
 
-  if (!newLog.name || !newLog.macAddress || !newLog.IP || !newLog.power) {
+  if (!newLog.name || !newLog.deviceId || !newLog.action) {
     ctx.res.statusCode = 500;
 
     ctx.body = {
       status: "failed",
-      message: "Missing name, mac address, IP or power",
+      message: "Missing name, device id or action",
     };
 
     return;
   }
 
-  fs.writeFile(`${__dirname}/../data/logs.json`, JSON.stringify([...logs, newLog]), (err) => {
-    if (err) {
-      console.log("write file logs error: ", err);
-    } else {
-      console.log("write file logs success");
+  fs.writeFile(
+    `${__dirname}/../data/logs.json`,
+    JSON.stringify([...logs, newLog]),
+    (err) => {
+      if (err) {
+        console.log("write file logs error: ", err);
+      } else {
+        console.log("write file logs success");
+      }
     }
-  });
+  );
 
   ctx.res.statusCode = 200;
 

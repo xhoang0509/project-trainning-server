@@ -1,26 +1,121 @@
 [
   {
-    "id": "abe93ca4-362e-4e48-8e03-4d1905df9d92",
-    "name": "TV 1",
-    "macAddress": "00:1B:44:11:3A:B7",
-    "IP": "127.0.0.1",
-    "power": 50,
-    "createAt": "2022-09-04T13:22:46.058Z"
+    "id": "af513729-a8cc-4600-a164-4c16cbf5e1dd",
+    "deviceId": 101,
+    "name": "TV",
+    "action": "Turn On",
+    "createdAt": "01:32:51.404"
   },
   {
-    "id": "d8b11e51-c5f9-4a52-8e6e-50ee0a397e2c",
-    "name": "TV 1",
-    "macAddress": "00:1B:44:11:3A:B7",
-    "IP": "127.0.0.1",
-    "power": 50,
-    "createAt": "2022-09-04T13:22:50.319Z"
+    "id": "47443c3b-ceaf-4291-a00b-fe96e40de9e2",
+    "deviceId": 102,
+    "name": "Washer",
+    "action": "Turn Off",
+    "createdAt": "01:33:09.982"
   },
   {
-    "id": "c3a5b151-2a79-40ea-aa83-2116eeecd79f",
-    "name": "TV 1",
-    "macAddress": "00:1B:44:11:3A:B7",
-    "IP": "127.0.0.1",
-    "power": 50,
-    "createAt": "2022-09-04T13:22:53.608Z"
+    "id": "b9e41044-d59a-4a15-be5c-da74aeaac0a5",
+    "deviceId": 103,
+    "name": "Washer",
+    "action": "Turn On",
+    "createdAt": 1662341604728
+  },
+  {
+    "id": "95cdb29e-dd27-4b12-9b2e-b7f7f17563ae",
+    "deviceId": 104,
+    "name": "Phone",
+    "action": "Turn Off",
+    "createdAt": 1662341607786
+  },
+  {
+    "id": "8e0a978a-3cd2-4b6c-8de7-53e1c9dd9eac",
+    "deviceId": 105,
+    "name": "Laptop",
+    "action": "Turn On",
+    "createdAt": 1662341610516
+  },
+  {
+    "id": "11ebb7e0-7835-4ec6-9a3f-64901337339d",
+    "deviceId": 106,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341616477
+  },
+  {
+    "id": "1bea29cd-3887-4ea3-8a8a-c4f069fb95fc",
+    "deviceId": 107,
+    "name": "Apple Watch",
+    "action": "Turn On",
+    "createdAt": 1662341644444
+  },
+  {
+    "id": "5969976a-e244-4047-9113-2a206d2d9a07",
+    "deviceId": 108,
+    "name": "Keyboard",
+    "action": "Turn On",
+    "createdAt": 1662341645150
+  },
+  {
+    "id": "49d85226-1cb8-458c-af43-d5de8d45bc22",
+    "deviceId": 109,
+    "name": "Mouse",
+    "action": "Turn Off",
+    "createdAt": 1662341645840
+  },
+  {
+    "id": "7a0fca4d-1662-4565-82b8-d8db72131253",
+    "deviceId": 110,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341646456
+  },
+  {
+    "id": "6dc8184b-c310-4c52-93c3-188a87800b36",
+    "deviceId": 111,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341647054
+  },
+  {
+    "id": "eb16ea84-8ba2-4762-b914-6891c289b298",
+    "deviceId": 112,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341647723
+  },
+  {
+    "id": "79b4eefe-20f5-4912-b925-0c45bd9ba16e",
+    "deviceId": 113,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341648385
+  },
+  {
+    "id": "41ed850d-86fe-442b-86c2-1552342ee909",
+    "deviceId": 114,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662341649046
+  },
+  {
+    "id": "de77b16d-f4c1-4e77-85fa-985fb1b22423",
+    "deviceId": 115,
+    "name": "Airpod",
+    "action": "Turn Off",
+    "createdAt": 1662341649653
+  },
+  {
+    "id": "76e1c543-b6e3-4eb2-981b-675088993e59",
+    "deviceId": 116,
+    "name": "Macbook Pro",
+    "action": "Turn On",
+    "createdAt": 1662341651322
+  },
+  {
+    "id": "51432a8f-db2e-46cb-b8d3-0394b2ed627e",
+    "deviceId": 117,
+    "name": "IPhone",
+    "action": "Turn Off",
+    "createdAt": 1662341651937
   }
 ]
