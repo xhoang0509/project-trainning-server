@@ -6,11 +6,41 @@ const logs = JSON.parse(
 );
 
 exports.getAll = async (ctx) => {
+  const logsPerPage = 10;
+  let totalPage = 0;
+  let newLogs = [];
+
+  let { q, page } = ctx.request.query;
+  page = page ? page : 1;
+
+  let logsFilter = q
+    ? logs.filter((item) => item.name.toLowerCase().includes(q.toLowerCase()))
+    : logs;
+
+  if (logsPerPage > logsFilter.length) {
+    totalPage = 1;
+    newLogs = logsFilter;
+  } else {
+    totalPage = Math.ceil(logsFilter.length / logsPerPage);
+    for (let i = 0; i < logsFilter.length; i++) {
+      if (
+        (page - 1) * logsPerPage + 1 <= i + 1 &&
+        i + 1 <= page * logsPerPage
+      ) {
+        newLogs.push(logsFilter[i]);
+      }
+    }
+  }
   ctx.res.statusCode = 200;
+
   ctx.body = {
     status: "success",
+    total: newLogs.length,
+    totalLogs: logsFilter.length,
+    page: 1,
+    totalPage,
     data: {
-      logs,
+      logs: newLogs,
     },
   };
 };

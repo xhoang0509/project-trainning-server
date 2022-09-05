@@ -42,13 +42,13 @@ exports.login = (ctx, next) => {
 };
 
 exports.register = (ctx, next) => {
-  const { body } = ctx.request;
+  const { name, username, password } = ctx.request.body;
 
   const newUser = {
     id: uuid.v4(),
-    name: body.name,
-    username: body.username,
-    password: body.password.toString(),
+    name,
+    username,
+    password: password.toString(),
   };
 
   if (!newUser.name || !newUser.username || !newUser.password) {

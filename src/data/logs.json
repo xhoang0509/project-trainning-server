@@ -117,5 +117,47 @@
     "name": "IPhone",
     "action": "Turn Off",
     "createdAt": 1662341651937
+  },
+  {
+    "id": "b17eadb7-a373-4189-ac6a-394a1105c4ed",
+    "deviceId": 10,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662368791052
+  },
+  {
+    "id": "132a029c-674b-4bcb-882f-e54bc8a3544b",
+    "deviceId": 10,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662368792051
+  },
+  {
+    "id": "a1d6e55d-8193-499f-8a6b-3abce3fcd8e7",
+    "deviceId": 10,
+    "name": "Selling Fan",
+    "action": "Turn Off",
+    "createdAt": 1662368792802
+  },
+  {
+    "id": "c9c4d355-7cd2-4487-995d-71934d29defb",
+    "deviceId": 10,
+    "name": "Selling Fan 1",
+    "action": "Turn Off",
+    "createdAt": 1662368795931
+  },
+  {
+    "id": "aaa7bce0-707a-47b2-b8b2-14bafaf86144",
+    "deviceId": 10,
+    "name": "Selling Fan 2",
+    "action": "Turn Off",
+    "createdAt": 1662368799801
+  },
+  {
+    "id": "5ed31138-f495-4c2c-a101-3ae09913207e",
+    "deviceId": 10,
+    "name": "Selling Fan 4",
+    "action": "Turn Off",
+    "createdAt": 1662368801690
   }
 ]

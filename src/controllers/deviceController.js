@@ -6,11 +6,20 @@ const devices = JSON.parse(
 );
 
 exports.getAll = async (ctx) => {
+  const { q } = ctx.request.query;
+
+  const devicesFilter = q
+    ? devices.filter((device) =>
+        device.name.toLowerCase().includes(q.toLowerCase())
+      )
+    : devices;
+
   ctx.res.statusCode = 200;
   ctx.body = {
     status: "success",
+    total: devicesFilter.length,
     data: {
-      devices,
+      devices: devicesFilter,
     },
   };
 };
@@ -22,6 +31,7 @@ exports.createDevice = async (ctx) => {
     name,
     IP,
     power,
+    colorChart: `#${Math.floor(Math.random() * 16777215).toString(16)}`,
     macAddress: "00:1B:44:11:3A:B7",
     createdAt: new Date(),
   };
